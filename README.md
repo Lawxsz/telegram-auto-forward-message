@@ -10,6 +10,9 @@ here will go the urls of the channels where you want to autopublish, from factor
 # ☄️ How Work!!
 
 
+https://user-images.githubusercontent.com/116668706/230751783-0b98f1ca-fedf-48ac-a7bb-424ef663381a.mp4
+
+
 # 🔰 **Coding Services - Contact** 🔰 
 - **Telegram:** https://t.me/Lawxsz
 - **Discord:** Lawxsz#5963
