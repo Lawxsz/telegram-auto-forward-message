@@ -8,6 +8,7 @@ client.start()
 
 
 async def get_message():
+                                        # ID OF GROUP   
     message = await client.get_messages(-1001632822487, ids="" # ID OF MESSAGE TO FORWARD, COPY THE LINK AND COPY THE ID (LASTEST NUMBERS))
     return message
 
