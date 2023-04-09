@@ -12,6 +12,9 @@ here will go the urls of the channels where you want to autopublish, from factor
 
 https://user-images.githubusercontent.com/116668706/230751783-0b98f1ca-fedf-48ac-a7bb-424ef663381a.mp4
 
+# 🛡️ MY TELEGRAM / DISCORD
+https://t.me/lawoficial
+https://discord.gg/F3zsrZqNBY
 
 # 🔰 **Coding Services - Contact** 🔰 
 - **Telegram:** https://t.me/Lawxsz
