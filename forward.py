@@ -1,9 +1,10 @@
 from telethon import TelegramClient, events
+from telethon.tl.functions.channels import JoinChannelRequest
+
 import time
 import os
 import configparser
 from colorama import Fore
-
 
 
 
@@ -71,11 +72,39 @@ class Forwarder:
 
         with client:
             client.loop.run_until_complete(forward_message())
+    def joingroup():
+        configf = configparser.RawConfigParser()
+        configf.read('config.data')
+
+
+        api_id = configf['cred']['id']
+        api_hash = configf['cred']['hash']
+        phone = configf['cred']['phone']
+        client = TelegramClient(phone, api_id, api_hash)
+        async def join_group(group_link):
+            entity = await client.get_entity(group_link)
+            await client(JoinChannelRequest(entity))
+
+        with client:
+            with open('channels.txt') as f:
+                group_links = f.readlines()
+                for link in group_links:
+                    link = link.strip() 
+                    try:
+                        client.loop.run_until_complete(join_group(link))
+                        print(f"{Fore.LIGHTGREEN_EX}Joined Succesfuly!  {link}")
+                    except Exception as e:
+                        print(f"Fail to join {link}. \nError: {e}")
+
 forwarder = Forwarder
-enter = input("¿You want to SETUP a account? 1: \n¿You want to Start the Forwarder? 2: ")
+print(f"{Fore.GREEN}―――― @Lawxsz Telegram Tool ――――――")
+print(f"\n{Fore.YELLOW}1: Setup Account\n2: Start Forwarding\n3: Join to Groups")
+enter = input("")
 if enter == "1":
     forwarder.setup()
 elif enter == "2":
     forwarder.start()
+elif enter == "3":
+    forwarder.joingroup()
 else:
     print("ERROR, choice a valid option bro!")
