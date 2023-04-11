@@ -1,3 +1,5 @@
+# MADE BY @Lawxsz on github, telegram. don't sell this shit or give me credits
+
 from telethon import TelegramClient, events
 from telethon.tl.functions.channels import JoinChannelRequest
 
@@ -36,8 +38,10 @@ class Forwarder:
         phone = file['cred']['phone']
         client = TelegramClient(phone, api_id, api_hash)        
         client.start()
+        ch1 = int(input("Channel ID: "))
+        id1 = int(input("ID MESSAGE: "))
         async def get_message():
-            message = await client.get_messages(-1001632822487, ids=83)
+            message = await client.get_messages(ch1, ids=id1)
             return message
 
 
