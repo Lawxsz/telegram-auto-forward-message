@@ -3,7 +3,7 @@
 
 # 🎆 How to setup
 - pip install -r requirements.txt
-- First, put your api hash id, id and your number in forward.py, here is a picture attached. Get telegram api id https://my.telegram.org/
+- First, put your api hash id, id and your number in main.py, here is a picture attached. Get telegram api id https://my.telegram.org/
 
 - Then in channels.txt put the URLS https://t.me/lawxszchannel for example, 
 here will go the urls of the channels where you want to autopublish, from factory I put that every 2 minutes autopublish, you can edit that!
