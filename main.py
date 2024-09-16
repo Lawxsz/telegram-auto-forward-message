@@ -39,9 +39,7 @@ class Forwarder:
 
     def setup(self):
         self.clear_screen()
-        if os.path.exists(self.config_path):
-            print(f"{Fore.RED}Configuration already exists!{Fore.RESET}")
-            return
+
 
         acc = configparser.RawConfigParser()
         acc.add_section('cred')
